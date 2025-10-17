@@ -239,18 +239,18 @@ function GalleryPage() {
           </h1>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="relative group overflow-hidden rounded-2xl shadow-xl transform hover:scale-105 transition-all duration-300">
-              <img 
-                src={omarPhoto} 
-                alt="عمر" 
-                className="w-full h-auto object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                <p className="text-white text-2xl font-bold">عمر ❤️</p>
-              </div>
-            </div>
-            {/* Add more images here */}
-          </div>
+  <div className="relative group overflow-hidden rounded-2xl shadow-xl transform hover:scale-105 transition-all duration-300">
+    <img 
+      src="/IMG_1364.jpeg" 
+      alt="عمر" 
+      className="w-full h-auto object-cover"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+      <p className="text-white text-2xl font-bold">عمر ❤️</p>
+    </div>
+  </div>
+  {/* هنا تقدر تضيف صور ثانية بنفس الطريقة */}
+</div>
         </div>
       </div>
     </div>
