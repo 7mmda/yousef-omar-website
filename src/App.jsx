@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom'
-import omarPhoto from './assets/omar-photo.jpg';
 import { Heart, Music, Sparkles, Play, Pause } from 'lucide-react'
 import { Button } from '@/components/ui/button.jsx'
 import './App.css'
