@@ -6,7 +6,7 @@
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
+  --radius-lg: var(---radius);
   --radius-xl: calc(var(--radius) + 4px);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -43,38 +43,38 @@
 
 :root {
   --radius: 0.625rem;
-  /* Love colors theme - Pink, Red, Purple, Gold, White */
-  --background: linear-gradient(135deg, #ffeef8 0%, #ffe0f0 50%, #ffd4eb 100%);
-  --foreground: #4a1942;
+  /* Masculine romantic colors - Deep blues, silvers, grays, with subtle purples/pinks */
+  --background: linear-gradient(135deg, #e0f2f7 0%, #c8e6f0 50%, #b3d9e6 100%); /* Light blue/grey gradient */
+  --foreground: #2c3e50; /* Dark blue-gray */
   --card: rgba(255, 255, 255, 0.9);
-  --card-foreground: #4a1942;
+  --card-foreground: #2c3e50;
   --popover: rgba(255, 255, 255, 0.95);
-  --popover-foreground: #4a1942;
-  --primary: #d946a6;
+  --popover-foreground: #2c3e50;
+  --primary: #3498db; /* Blue */
   --primary-foreground: #ffffff;
-  --secondary: #fbbf24;
-  --secondary-foreground: #4a1942;
-  --muted: #fce7f3;
-  --muted-foreground: #831843;
-  --accent: #c026d3;
+  --secondary: #95a5a6; /* Silver */
+  --secondary-foreground: #2c3e50;
+  --muted: #ecf0f1; /* Light gray */
+  --muted-foreground: #7f8c8d;
+  --accent: #8e44ad; /* Deep purple */
   --accent-foreground: #ffffff;
-  --destructive: #dc2626;
-  --border: #f9a8d4;
-  --input: #fbcfe8;
-  --ring: #d946a6;
-  --chart-1: #ec4899;
-  --chart-2: #f472b6;
-  --chart-3: #c026d3;
-  --chart-4: #fbbf24;
-  --chart-5: #f59e0b;
+  --destructive: #e74c3c;
+  --border: #aed6f1; /* Light blue border */
+  --input: #d6eaf8; /* Lighter blue input */
+  --ring: #3498db;
+  --chart-1: #3498db;
+  --chart-2: #2ecc71;
+  --chart-3: #f1c40f;
+  --chart-4: #e67e22;
+  --chart-5: #e74c3c;
   --sidebar: rgba(255, 255, 255, 0.9);
-  --sidebar-foreground: #4a1942;
-  --sidebar-primary: #d946a6;
+  --sidebar-foreground: #2c3e50;
+  --sidebar-primary: #3498db;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #fce7f3;
-  --sidebar-accent-foreground: #4a1942;
-  --sidebar-border: #f9a8d4;
-  --sidebar-ring: #d946a6;
+  --sidebar-accent: #ecf0f1;
+  --sidebar-accent-foreground: #2c3e50;
+  --sidebar-border: #aed6f1;
+  --sidebar-ring: #3498db;
 }
 
 @layer base {
@@ -82,7 +82,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    background: linear-gradient(135deg, #ffeef8 0%, #ffe0f0 50%, #ffd4eb 100%);
+    background: linear-gradient(135deg, #e0f2f7 0%, #c8e6f0 50%, #b3d9e6 100%);
     background-attachment: fixed;
     font-family: 'Cairo', 'Amiri', sans-serif;
     @apply text-foreground;
