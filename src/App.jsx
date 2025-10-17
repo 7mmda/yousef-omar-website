@@ -4,7 +4,6 @@ import omarPhoto from './assets/omar-photo.jpg';
 import { Heart, Music, Sparkles, Play, Pause } from 'lucide-react'
 import { Button } from '@/components/ui/button.jsx'
 import './App.css'
-// import omarImage from './assets/IMG_1364.jpeg'
 import { useAudio } from './lib/AudioContext.jsx';
 
 // Heart particles component
@@ -232,25 +231,26 @@ function GalleryPage() {
             العودة للرئيسية
           </Button>
         </Link>
-        
+
         <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl border-2 border-blue-200 animate-fadeIn">
           <h1 className="text-5xl md:text-6xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600 mb-12">
             معرض الذكريات
           </h1>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-  <div className="relative group overflow-hidden rounded-2xl shadow-xl transform hover:scale-105 transition-all duration-300">
-    <img 
-      src="/IMG_1364.jpeg" 
-      alt="عمر" 
-      className="w-full h-auto object-cover"
-    />
-    <div className="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-      <p className="text-white text-2xl font-bold">عمر ❤️</p>
-    </div>
-  </div>
-  {/* هنا تقدر تضيف صور ثانية بنفس الطريقة */}
-</div>
+            <div className="relative group overflow-hidden rounded-2xl shadow-xl transform hover:scale-105 transition-all duration-300">
+              <img 
+                src="/IMG_1364.jpeg"  // هذا مسار الصورة من public
+                alt="عمر" 
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <p className="text-white text-2xl font-bold">عمر ❤️</p>
+              </div>
+            </div>
+
+            {/* هنا ممكن تضيف صور ثانية بنفس الطريقة */}
+          </div>
         </div>
       </div>
     </div>
