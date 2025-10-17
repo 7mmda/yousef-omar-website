@@ -241,7 +241,7 @@ function GalleryPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="relative group overflow-hidden rounded-2xl shadow-xl transform hover:scale-105 transition-all duration-300">
               <img 
-                src="/omar-photo.jpg" 
+                src={omarPhoto} 
                 alt="عمر" 
                 className="w-full h-auto object-cover"
               />
