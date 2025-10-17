@@ -64,7 +64,7 @@ function IntroPage() {
             className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white text-xl px-10 py-6 rounded-full shadow-lg transform hover:scale-105 transition-all flex items-center gap-3 animate-pulse"
           >
             <Play className="w-7 h-7" />
-            ابدأ قصتنا
+            اضغط هني
           </Button>
         )}
       </div>
@@ -276,7 +276,7 @@ function App() {
   return (
     <Router>
       <HeartsBackground />
-      <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center space-y-2">
+      <div className="fixed top-8 right-8 z-50 flex flex-col items-end space-y-2">
         {hasBeenPlayed && (
           <Button
             onClick={togglePlay}
