@@ -55,11 +55,8 @@ function IntroPage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-8 relative z-10 bg-gradient-to-br from-blue-100 to-purple-100 animate-fadeIn">
       <div className="max-w-xl mx-auto text-center space-y-8">
-        <h1 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 mb-6">
-          مرحباً بكما في قصتنا
-        </h1>
-        <p className="text-xl md:text-2xl text-gray-700 font-semibold mb-8">
-          اضغط لتشغيل الموسيقى والدخول إلى عالمنا
+        <p className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 mb-6">
+          عندي لك هدية وتعبت عليها وايد لاكن تستاهلها واحبك واعشقك بوبي💙
         </p>
         {showButton && (
           <Button
@@ -87,7 +84,7 @@ function HomePage() {
         </div>
         
         <h1 className="text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600 mb-6">
-          يوسف وعمر
+          I Love you boby💙
         </h1>
         
         <p className="text-2xl md:text-3xl text-purple-700 font-semibold mb-8">
@@ -102,8 +99,7 @@ function HomePage() {
         
         <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border-2 border-blue-200">
           <p className="text-xl md:text-2xl leading-relaxed text-gray-800">
-            "في لحظة لم نتوقعها، التقت قلوبنا... من عداوة إلى صداقة، ومن صداقة إلى حب لا ينتهي. 
-            هذه قصتنا، قصة يوسف وعمر، حيث كل كلمة مكتوبة بالحب، وكل لحظة محفورة في القلب."
+            "الله يديمك لي يارب"
           </p>
         </div>
         
@@ -248,9 +244,9 @@ function GalleryPage() {
             </div>
             
             <div className="flex flex-col justify-center space-y-6 p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl">
-              <h2 className="text-3xl font-bold text-purple-700">لحظات لا تُنسى</h2>
+              <h2 className="text-3xl font-bold text-purple-700">أحتفظُ بصورٍٍة لويهَك</h2>
               <p className="text-xl text-gray-700 leading-relaxed">
-                كل صورة تحمل ذكرى، وكل ذكرى تحمل حباً لا ينتهي. هذه بعض اللحظات التي جمعتنا وجعلت قصتنا أجمل.
+                وهذا أدفاُ ما ملكته طيِلة حياتي💙
               </p>
               <div className="flex gap-3 flex-wrap">
                 <span className="px-4 py-2 bg-blue-200 text-blue-800 rounded-full text-sm font-semibold">حب</span>
