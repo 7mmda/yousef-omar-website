@@ -139,6 +139,7 @@ function StoryPage() {
           <h1 className="text-5xl md:text-6xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600 mb-12">
             قصتنا
           </h1>
+          <p className="text-xl md:text-2xl text-center text-blue-600 mb-8">أحبك</p>
           
           <div className="space-y-6 text-lg md:text-xl leading-relaxed text-gray-800">
             <div className="border-r-4 border-blue-400 pr-6">
