@@ -1,0 +1,290 @@
+import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { Heart, Music, Sparkles } from 'lucide-react'
+import { Button } from '@/components/ui/button.jsx'
+import './App.css'
+import omarImage from './assets/IMG_1364.jpeg'
+
+// Heart particles component
+function HeartsBackground() {
+  const hearts = Array.from({ length: 15 }, (_, i) => ({
+    id: i,
+    left: `${Math.random() * 100}%`,
+    animationDelay: `${Math.random() * 10}s`,
+    fontSize: `${15 + Math.random() * 15}px`
+  }))
+
+  return (
+    <div className="hearts-bg">
+      {hearts.map(heart => (
+        <div
+          key={heart.id}
+          className="heart-particle"
+          style={{
+            left: heart.left,
+            animationDelay: heart.animationDelay,
+            fontSize: heart.fontSize
+          }}
+        >
+          ❤️
+        </div>
+      ))}
+    </div>
+  )
+}
+
+// Home Page
+function HomePage() {
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center p-8 relative z-10">
+      <div className="max-w-4xl mx-auto text-center space-y-8 animate-fadeIn">
+        <div className="flex justify-center mb-8">
+          <Heart className="w-20 h-20 text-pink-500 animate-heartbeat" />
+        </div>
+        
+        <h1 className="text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-600 mb-6">
+          يوسف وعمر
+        </h1>
+        
+        <p className="text-2xl md:text-3xl text-purple-800 font-semibold mb-8">
+          قصة حب كُتبت بالقدر
+        </p>
+        
+        <div className="flex items-center justify-center gap-2 text-lg text-pink-600 mb-8">
+          <Sparkles className="w-6 h-6" />
+          <span>بين إيديا - ماجد المهندس</span>
+          <Music className="w-6 h-6" />
+        </div>
+        
+        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border-2 border-pink-200">
+          <p className="text-xl md:text-2xl leading-relaxed text-gray-800">
+            "في لحظة لم نتوقعها، التقت قلوبنا... من عداوة إلى صداقة، ومن صداقة إلى حب لا ينتهي. 
+            هذه قصتنا، قصة يوسف وعمر، حيث كل كلمة مكتوبة بالحب، وكل لحظة محفورة في القلب."
+          </p>
+        </div>
+        
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+          <Link to="/story">
+            <Button className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-xl px-8 py-6 rounded-full shadow-lg transform hover:scale-105 transition-all">
+              اقرأ قصتنا
+            </Button>
+          </Link>
+          <Link to="/gallery">
+            <Button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white text-xl px-8 py-6 rounded-full shadow-lg transform hover:scale-105 transition-all">
+              معرض الذكريات
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// Story Page
+function StoryPage() {
+  return (
+    <div className="min-h-screen p-8 relative z-10">
+      <div className="max-w-4xl mx-auto">
+        <Link to="/">
+          <Button className="mb-8 bg-pink-500 hover:bg-pink-600 text-white">
+            العودة للرئيسية
+          </Button>
+        </Link>
+        
+        <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl border-2 border-pink-200 space-y-8 animate-fadeIn">
+          <h1 className="text-5xl md:text-6xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-600 mb-12">
+            قصتنا
+          </h1>
+          
+          <div className="space-y-6 text-lg md:text-xl leading-relaxed text-gray-800">
+            <div className="border-r-4 border-pink-400 pr-6">
+              <h2 className="text-3xl font-bold text-purple-700 mb-4">البداية</h2>
+              <p>
+                يوم من الأيام شفت شخص صدفة وشفته في حديقة صوب بيتنا، وكان شخص يحب المشاكل وكان كرهي له مب طبيعي ونفس الشي. المهم، ونحن دائماً حقين المنطقة نسوي لعب بالأيام بالحديقة، والمهم يا اليوم الي نلعب فيه وهذا الشخص كان ربيعهم ويا الحديقة هو وأخوه وهو أكبر عن أخوه.
+              </p>
+              <p className="mt-4">
+                لعبنا وخلصنا وهو كان يدور حسابي وانا كنت أدور حسابه لين ماحصلنا حسابات بعض، لاكن انا ضفته والشخص. في البداية ماكان عندي له مشاعر ولا أعرفه وايد لاكن ضفته وسولفنا شوي ومن بعدها ماصرنا نكلم بعض أبداً أبداً، وتمت أسابيع وشهور مانكلم بعض بس سولفنا دقيقة وحدة ومن بعدها ماصرنا نكلم بعض ولا بينا أي شي لا ستريك ولا أي شي.
+              </p>
+            </div>
+            
+            <div className="border-r-4 border-purple-400 pr-6">
+              <h2 className="text-3xl font-bold text-pink-700 mb-4">نقطة التحول</h2>
+              <p>
+                يا اليوم الي انتقل إلى رحمة الله واحد من أهلي وأهله وشخص وايد وايد عزيز ع قلوبنا، وخلصنا كل شي وشفت الشخص أول يوم صدفة ولا كلمته ولا بينا أي شي. وثاني يوم عزاء تاريخ [2024-9-8] شفته صدفة وتعشينا ويا بعض ولا كلمنا بعض، وخلص اليوم وكل واحد مكسور بداخله فاقدين شخص عزيز علينا.
+              </p>
+              <p className="mt-4">
+                والمهم الشخص الي عرفته هذا ماكنت أعرف أنه شخص من أهلي وقريب مني، ورجعنا البيت ويعني كلمته حبه حبه وسولفنا ونمنا ونفس الشي ثاني يوم وثالث. لاكن ثالث يوم كان شوي غير، تعودنا ع بعض نسولف يومياً وكل واحد يطرش صورة عساس ستريك لاكن لبعض بس وصورة حلوة وأغنية حلوة.
+              </p>
+            </div>
+            
+            <div className="border-r-4 border-pink-400 pr-6">
+              <h2 className="text-3xl font-bold text-purple-700 mb-4">نمو المشاعر</h2>
+              <p>
+                والمهم دقينا لبعض وسولفنا ورقدنا كل يوم نفس الشي، وكل يوم المشاعر تزيد وحبينا بعض. لاكن كل واحد كاتم بقلبه بقلبه كلام للثاني لاكن يخاف يقوله وينددم، وكل واحد يحسب الشخص الثاني ماله مشاعر بقلبه ويحسب لو قال الي بقلبه الثاني يعطيه بلوك.
+              </p>
+              <p className="mt-4">
+                والمهم في أنا فيني عادة إذا كنت تعبان أخربط وأيب العيد، ففي يوم من الأيام كنت داق لعمر وبنام وكنت تعبان وايد فقلتله وأنا نايم وتعبان قلتله: "أحبببببك" - أول كلمة حب تطلع بينا. وهو مايعرف شو يسوي ومن كثر الصدمة تم ساكت وما يعرف شو يقول، وأنا كملت نومي طبيعي.
+              </p>
+            </div>
+            
+            <div className="border-r-4 border-purple-400 pr-6">
+              <h2 className="text-3xl font-bold text-pink-700 mb-4">معرفة التفاصيل</h2>
+              <p>
+                والمهم الشخص هذا اسمه (عمر)، ومع الأيام عرفت كل شي عنه ووقت نومه وأسلوبه وسوالفه وتفاصيله ووين يروح ووين يرجع، كل تفاصيله أعرفها وتفاصيل يومه أعرفها. والمهم وعمر يومياً أنا وياه و24 ساعة وياه، أقوم وياه أرقد وياه 24 ساعة وياه وما يكتمل يومي بدونه، حرفياً أول مانقوم لين مانرقد ويا بعض.
+              </p>
+            </div>
+            
+            <div className="border-r-4 border-pink-400 pr-6">
+              <h2 className="text-3xl font-bold text-purple-700 mb-4">لحظة الاعتراف</h2>
+              <p>
+                والمهم يا يوم من الأيام ووالله رزق أختي ببنت الحمد لله، وعندي أخوان وخوات لاكن يداومون. فطبيعي كل بنت إذا الله رزقها بمولود تنام بيت أهلها 40 يوم، فأختي نامت في بيتنا وبعض الأيام أنا أنام عندها أجوف بنتها. والمهم فماقدر أدق لعمر وأسولف وياه فشو تمت أسولف وياه بسناب.
+              </p>
+              <p className="mt-4">
+                وكل واحد كاتم بقلببببه ووده يعترف للثاني بالحب والمشاعر الي بقلبه، وكل واحد كاتم ويخاف يعترف للثاني. فأنا يوسف خلاص وصللللت حدي كتما وايد، وقلت في بالي لمتى بتم كاتم مشاعري وأبي أعترفله لاكن خاييييف من رد فعله وخايففف يعطيني بلوك. فقلت لمتى بتريا وأنا كاتم؟
+              </p>
+              <p className="mt-4">
+                فوصلت حدي خلاص ولين ولين ما اعترفت له بمشاعري، كلام طويل وكله حب واعترافات حب وأني أغار عليه وأني وأني... بعد ماكتبت الكلام خفت وسكرت التلفون أخاف من ردة فعله، وماوصلني إشعار أنه طرش شي يعني كتب شي.
+              </p>
+              <p className="mt-4">
+                وبعد 3 دقايق تقريباً وصلني إشعار أنه كتب، وأول مابطل الجات المحادثة، إلا وأشوف كلام طوييييل ونفس الكلام الي كتبته له كتبه لي! وهو كان ينتظر أني أعترفله ورد علي بكلام حب واعترافات، وكل واحد مستانس وفرحان.
+              </p>
+            </div>
+            
+            <div className="border-r-4 border-purple-400 pr-6 bg-gradient-to-l from-pink-50 to-purple-50 p-6 rounded-lg">
+              <h2 className="text-3xl font-bold text-pink-700 mb-4">رسالة من القلب</h2>
+              <p className="text-2xl italic text-purple-900 leading-relaxed">
+                "وأنا أدري بتجوف هالكلام كله وحاب أقولك أني والله أحبك وأعشقك، وأنه مكانتك في قلبي والله غير ويشهد الله علي ماحبيت إنسان كثر ماحبيتك، وأدعي كل يوم أنه الله يديمك لي طول العمر وأني أحبك وايد وايد 💙💙💙💙"
+              </p>
+            </div>
+            
+            <div className="text-center mt-12 p-8 bg-gradient-to-r from-pink-100 to-purple-100 rounded-2xl">
+              <p className="text-2xl font-bold text-purple-800">
+                ومرت الأيام وتعلقنا ببعض والأمور حلللوووه وولليوم وياي هو والمشاعر والحب للآن فينا
+              </p>
+              <div className="flex justify-center gap-4 mt-6">
+                <Heart className="w-12 h-12 text-pink-500 animate-heartbeat" />
+                <Heart className="w-12 h-12 text-purple-500 animate-heartbeat" style={{ animationDelay: '0.3s' }} />
+                <Heart className="w-12 h-12 text-pink-500 animate-heartbeat" style={{ animationDelay: '0.6s' }} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// Gallery Page
+function GalleryPage() {
+  return (
+    <div className="min-h-screen p-8 relative z-10">
+      <div className="max-w-6xl mx-auto">
+        <Link to="/">
+          <Button className="mb-8 bg-pink-500 hover:bg-pink-600 text-white">
+            العودة للرئيسية
+          </Button>
+        </Link>
+        
+        <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl border-2 border-pink-200 animate-fadeIn">
+          <h1 className="text-5xl md:text-6xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-600 mb-12">
+            معرض الذكريات
+          </h1>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="relative group overflow-hidden rounded-2xl shadow-xl transform hover:scale-105 transition-all duration-300">
+              <img 
+                src={omarImage} 
+                alt="عمر" 
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <p className="text-white text-2xl font-bold">عمر ❤️</p>
+              </div>
+            </div>
+            
+            <div className="flex flex-col justify-center space-y-6 p-6 bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl">
+              <h2 className="text-3xl font-bold text-purple-800">لحظات لا تُنسى</h2>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                كل صورة تحمل ذكرى، وكل ذكرى تحمل حباً لا ينتهي. هذه بعض اللحظات التي جمعتنا وجعلت قصتنا أجمل.
+              </p>
+              <div className="flex gap-3 flex-wrap">
+                <span className="px-4 py-2 bg-pink-200 text-pink-800 rounded-full text-sm font-semibold">حب</span>
+                <span className="px-4 py-2 bg-purple-200 text-purple-800 rounded-full text-sm font-semibold">ذكريات</span>
+                <span className="px-4 py-2 bg-pink-200 text-pink-800 rounded-full text-sm font-semibold">سعادة</span>
+                <span className="px-4 py-2 bg-purple-200 text-purple-800 rounded-full text-sm font-semibold">أمل</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-12 text-center p-8 bg-gradient-to-r from-pink-100 to-purple-100 rounded-2xl">
+            <p className="text-2xl text-purple-800 italic">
+              "بين إيديا وأحس إنك بعيد، ذوب بأحضاني مثل قطعة جليد"
+            </p>
+            <p className="text-lg text-gray-600 mt-4">- ماجد المهندس</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// Audio Player Component
+function AudioPlayer() {
+  const [isPlaying, setIsPlaying] = useState(false)
+  
+  useEffect(() => {
+    // Auto-play music on load
+    const audio = document.getElementById('background-music')
+    if (audio) {
+      audio.play().then(() => {
+        setIsPlaying(true)
+      }).catch(err => {
+        console.log('Auto-play prevented:', err)
+      })
+    }
+  }, [])
+  
+  const togglePlay = () => {
+    const audio = document.getElementById('background-music')
+    if (audio) {
+      if (isPlaying) {
+        audio.pause()
+      } else {
+        audio.play()
+      }
+      setIsPlaying(!isPlaying)
+    }
+  }
+  
+  return (
+    <div className="fixed bottom-8 left-8 z-50">
+      <Button
+        onClick={togglePlay}
+        className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white rounded-full p-4 shadow-lg transform hover:scale-110 transition-all"
+      >
+        <Music className={`w-6 h-6 ${isPlaying ? 'animate-pulse' : ''}`} />
+      </Button>
+      <audio id="background-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+  )
+}
+
+// Main App Component
+function App() {
+  return (
+    <Router>
+      <HeartsBackground />
+      <AudioPlayer />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/story" element={<StoryPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+      </Routes>
+    </Router>
+  )
+}
+
+export default App
+
