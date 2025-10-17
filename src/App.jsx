@@ -1,4 +1,4 @@
-'''import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom'
 import { Heart, Music, Sparkles, Play, Pause } from 'lucide-react'
 import { Button } from '@/components/ui/button.jsx'
