@@ -138,8 +138,7 @@ function StoryPage() {
           <p className="text-xl md:text-2xl text-center text-blue-600 mb-8">أحبك</p>
           
           <div className="space-y-6 text-lg md:text-xl leading-relaxed text-gray-800">
-            <div className="border-r-4 border-blue-400 pr-6">
-              <h2 className="text-3xl font-bold text-purple-700 mb-4">البداية</h2>
+            <div className="pr-6">
               <p>
                 يوم من الأيام شفت شخص صدفة وشفته في حديقة صوب بيتنا، وكان شخص يحب المشاكل وكان كرهي له مب طبيعي ونفس الشي. المهم، ونحن دائماً حقين المنطقة نسوي لعب بالأيام بالحديقة، والمهم يا اليوم الي نلعب فيه وهذا الشخص كان ربيعهم ويا الحديقة هو وأخوه وهو أكبر عن أخوه.
               </p>
@@ -148,8 +147,7 @@ function StoryPage() {
               </p>
             </div>
             
-            <div className="border-r-4 border-blue-400 pr-6">
-              <h2 className="text-3xl font-bold text-purple-700 mb-4">قصتنا</h2>
+            <div className="pr-6">
               <p>
                 والمهم دقينا لبعض وسولفنا ورقدنا كل يوم نفس الشي، وكل يوم المشاعر تزيد وحبينا بعض. لاكن كل واحد كاتم بقلبه بقلبه كلام للثاني لاكن يخاف يقوله وينددم، وكل واحد يحسب الشخص الثاني ماله مشاعر بقلبه ويحسب لو قال الي بقلبه الثاني يعطيه بلوك.
               </p>
@@ -158,8 +156,7 @@ function StoryPage() {
               </p>
             </div>
             
-            <div className="border-r-4 border-blue-400 pr-6">
-              <h2 className="text-3xl font-bold text-purple-700 mb-4">لحظة الاعتراف</h2>
+            <div className="pr-6">
               <p>
                 والمهم يا يوم من الأيام ووالله رزق أختي ببنت الحمد لله، وعندي أخوان وخوات لاكن يداومون. فطبيعي كل بنت إذا الله رزقها بمولود تنام بيت أهلها 40 يوم، فأختي نامت في بيتنا وبعض الأيام أنا أنام عندها أجوف بنتها. والمهم فماقدر أدق لعمر وأسولف وياه فشو تمت أسولف وياه بسناب.
               </p>
@@ -174,8 +171,7 @@ function StoryPage() {
               </p>
             </div>
             
-            <div className="border-r-4 border-purple-400 pr-6 bg-gradient-to-l from-blue-50 to-purple-50 p-6 rounded-lg">
-              <h2 className="text-3xl font-bold text-blue-700 mb-4">رسالة من القلب</h2>
+            <div className="pr-6 bg-gradient-to-l from-blue-50 to-purple-50 p-6 rounded-lg">
               <p className="text-2xl italic text-purple-900 leading-relaxed">
                 "وأنا أدري بتجوف هالكلام كله وحاب أقولك أني والله أحبك وأعشقك، وأنه مكانتك في قلبي والله غير ويشهد الله علي ماحبيت إنسان كثر ماحبيتك، وأدعي كل يوم أنه الله يديمك لي طول العمر وأني أحبك وايد وايد 💙💙💙💙"
               </p>
