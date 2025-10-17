@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+'''import { useState, useEffect, useRef } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom'
 import { Heart, Music, Sparkles, Play, Pause } from 'lucide-react'
 import { Button } from '@/components/ui/button.jsx'
@@ -74,8 +74,6 @@ function IntroPage() {
 
 // Home Page
 function HomePage() {
-  const { isPlaying, togglePlay } = useAudio();
-
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-8 relative z-10">
       <div className="max-w-4xl mx-auto text-center space-y-8 animate-fadeIn">
@@ -139,7 +137,6 @@ function StoryPage() {
           
           <div className="space-y-6 text-lg md:text-xl leading-relaxed text-gray-800">
             <div className="border-r-4 border-blue-400 pr-6">
-              <h2 className="text-3xl font-bold text-purple-700 mb-4">البداية</h2>
               <p>
                 يوم من الأيام شفت شخص صدفة وشفته في حديقة صوب بيتنا، وكان شخص يحب المشاكل وكان كرهي له مب طبيعي ونفس الشي. المهم، ونحن دائماً حقين المنطقة نسوي لعب بالأيام بالحديقة، والمهم يا اليوم الي نلعب فيه وهذا الشخص كان ربيعهم ويا الحديقة هو وأخوه وهو أكبر عن أخوه.
               </p>
@@ -151,7 +148,30 @@ function StoryPage() {
 
             
             <div className="border-r-4 border-blue-400 pr-6">
-              <h2 className="text-3xl font-bold text-purple-700 mb-4">قصتنا</h2>
+              <p>
+                يا اليوم الي انتقل إلى رحمة الله واحد من أهلي وأهله وشخص وايد وايد عزيز ع قلوبنا، وخلصنا كل شي وشفت الشخص أول يوم صدفة ولا كلمته ولا بينا أي شي. وثاني يوم عزاء تاريخ [2024-9-8] شفته صدفة وتعشينا ويا بعض ولا كلمنا بعض، وخلص اليوم وكل واحد مكسور بداخله فاقدين شخص عزيز علينا.
+              </p>
+              <p className="mt-4">
+                والمهم الشخص الي عرفته هذا ماكنت أعرف أنه شخص من أهلي وقريب مني، ورجعنا البيت ويعني كلمته حبه حبه وسولفنا ونمنا ونفس الشي ثاني يوم وثالث. لاكن ثالث يوم كان شوي غير، تعودنا ع بعض نسولف يومياً وكل واحد يطرش صورة عساس ستريك لاكن لبعض بس وصورة حلوة وأغنية حلوة.
+              </p>
+            </div>
+
+            <div className="border-r-4 border-blue-400 pr-6">
+              <p>
+                ويا اليوم الي انتقل إلى رحمة الله واحد من أهلي وأهله وشخص وايد وايد عزيز ع قلوبنا، وخلصنا كل شي وشفت الشخص أول يوم صدفة ولا كلمته ولا بينا أي شي. وثاني يوم عزاء تاريخ [2024-9-8] شفته صدفة وتعشينا ويا بعض ولا كلمنا بعض، وخلص اليوم وكل واحد مكسور بداخله فاقدين شخص عزيز علينا.
+              </p>
+              <p className="mt-4">
+                والمهم الشخص الي عرفته هذا ماكنت أعرف أنه شخص من أهلي وقريب مني، ورجعنا البيت ويعني كلمته حبه حبه وسولفنا ونمنا ونفس الشي ثاني يوم وثالث. لاكن ثالث يوم كان شوي غير، تعودنا ع بعض نسولف يومياً وكل واحد يطرش صورة عساس ستريك لاكن لبعض بس وصورة حلوة وأغنية حلوة.
+              </p>
+            </div>
+
+            <div className="border-r-4 border-blue-400 pr-6">
+              <p>
+                والمهم الشخص هذا اسمه (عمر)، ومع الأيام عرفت كل شي عنه ووقت نومه وأسلوبه وسوالفه وتفاصيله ووين يروح ووين يرجع، كل تفاصيله أعرفها وتفاصيل يومه أعرفها. والمهم وعمر يومياً أنا وياه و24 ساعة وياه، أقوم وياه أرقد وياه 24 ساعة وياه وما يكتمل يومي بدونه، حرفياً أول مانقوم لين مانرقد ويا بعض.
+              </p>
+            </div>
+
+            <div className="border-r-4 border-blue-400 pr-6">
               <p>
                 والمهم دقينا لبعض وسولفنا ورقدنا كل يوم نفس الشي، وكل يوم المشاعر تزيد وحبينا بعض. لاكن كل واحد كاتم بقلبه بقلبه كلام للثاني لاكن يخاف يقوله وينددم، وكل واحد يحسب الشخص الثاني ماله مشاعر بقلبه ويحسب لو قال الي بقلبه الثاني يعطيه بلوك.
               </p>
@@ -163,7 +183,6 @@ function StoryPage() {
 
             
             <div className="border-r-4 border-blue-400 pr-6">
-              <h2 className="text-3xl font-bold text-purple-700 mb-4">لحظة الاعتراف</h2>
               <p>
                 والمهم يا يوم من الأيام ووالله رزق أختي ببنت الحمد لله، وعندي أخوان وخوات لاكن يداومون. فطبيعي كل بنت إذا الله رزقها بمولود تنام بيت أهلها 40 يوم، فأختي نامت في بيتنا وبعض الأيام أنا أنام عندها أجوف بنتها. والمهم فماقدر أدق لعمر وأسولف وياه فشو تمت أسولف وياه بسناب.
               </p>
@@ -221,7 +240,7 @@ function GalleryPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="relative group overflow-hidden rounded-2xl shadow-xl transform hover:scale-105 transition-all duration-300">
               <img 
-                src="/IMG_1364.jpeg" 
+                src="/omar-photo.jpg" 
                 alt="عمر" 
                 className="w-full h-auto object-cover"
               />
@@ -229,26 +248,7 @@ function GalleryPage() {
                 <p className="text-white text-2xl font-bold">عمر ❤️</p>
               </div>
             </div>
-            
-            <div className="flex flex-col justify-center space-y-6 p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl">
-              <h2 className="text-3xl font-bold text-purple-700">أحتفظُ بصورٍٍة لويهَك</h2>
-              <p className="text-xl text-gray-700 leading-relaxed">
-                وهذا أدفاُ ما ملكته طيِلة حياتي💙
-              </p>
-              <div className="flex gap-3 flex-wrap">
-                <span className="px-4 py-2 bg-blue-200 text-blue-800 rounded-full text-sm font-semibold">حب</span>
-                <span className="px-4 py-2 bg-purple-200 text-purple-800 rounded-full text-sm font-semibold">ذكريات</span>
-                <span className="px-4 py-2 bg-blue-200 text-blue-800 rounded-full text-sm font-semibold">سعادة</span>
-                <span className="px-4 py-2 bg-purple-200 text-purple-800 rounded-full text-sm font-semibold">أمل</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-12 text-center p-8 bg-gradient-to-r from-blue-100 to-purple-100 rounded-2xl">
-            <p className="text-2xl text-purple-800 italic">
-              "بين إيديا وأحس إنك بعيد، ذوب بأحضاني مثل قطعة جليد"
-            </p>
-            <p className="text-lg text-gray-600 mt-4">- ماجد المهندس</p>
+            {/* Add more images here */}
           </div>
         </div>
       </div>
@@ -256,24 +256,24 @@ function GalleryPage() {
   )
 }
 
-// Main App Component
-function App() {
-  const { isPlaying, togglePlay, hasBeenPlayed } = useAudio();
+function MusicControl() {
+  const { isPlaying, togglePlay } = useAudio();
 
+  return (
+    <div className="fixed top-4 left-4 z-50">
+      <Button onClick={togglePlay} className="bg-white/80 text-blue-500 hover:bg-white rounded-full p-3 shadow-lg">
+        {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
+      </Button>
+    </div>
+  );
+}
+
+
+export default function App() {
   return (
     <Router>
       <HeartsBackground />
-      <div className="fixed top-8 right-8 z-50 flex flex-col items-end space-y-2">
-        {hasBeenPlayed && (
-          <Button
-            onClick={togglePlay}
-            className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white text-lg rounded-full p-5 shadow-lg transform hover:scale-110 transition-all flex items-center gap-3"
-          >
-            {isPlaying ? <Pause className="w-7 h-7 animate-pulse" /> : <Play className="w-7 h-7" />}
-            {isPlaying ? 'إيقاف الموسيقى' : 'تشغيل الموسيقى'}
-          </Button>
-        )}
-      </div>
+      <MusicControl />
       <Routes>
         <Route path="/" element={<IntroPage />} />
         <Route path="/home" element={<HomePage />} />
@@ -281,8 +281,6 @@ function App() {
         <Route path="/gallery" element={<GalleryPage />} />
       </Routes>
     </Router>
-  );
+  )
 }
-
-export default App;
-
+'''
